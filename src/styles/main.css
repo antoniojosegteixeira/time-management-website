@@ -1,0 +1,18 @@
+body {
+  background-color: purple;
+}
+
+.toggleButton {
+  color: #c50404;
+}
+.toggleButton.on {
+  color: green;
+}
+
+.listTransition {
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+.listTransition.on {
+  opacity: 1;
+}/*# sourceMappingURL=main.css.map */
