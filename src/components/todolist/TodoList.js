@@ -7,13 +7,11 @@ const TodoList = () => {
 
   const handleItemAdd = (note) => {
     if(!note){
-      console.log("nn tem nada");
       return
     }
 
     for(let i in noteCollection){
       if(noteCollection[i].text === note){
-        console.log("jÁ TEM, CANCELA");
         return
       }
     }
@@ -40,7 +38,7 @@ const TodoList = () => {
   }
 
   return (
-    <div>
+    <div className="ui container medium">
       <Input noteInput={handleItemAdd}></Input>   
       <NoteTable noteCollection={noteCollection} deleteItem={deleteItem}/>
     </div>

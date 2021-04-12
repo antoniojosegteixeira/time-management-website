@@ -3,16 +3,43 @@ body {
 }
 
 .toggleButton {
-  color: #c50404;
+  color: #d64400;
 }
 .toggleButton.on {
   color: green;
 }
 
-.listTransition {
-  opacity: 0;
-  transition: all 0.2s ease-in-out;
+.ui.container.medium {
+  width: 50%;
 }
-.listTransition.on {
-  opacity: 1;
+
+.gradient {
+  height: 20em;
+  background: #9004ed;
+  background: linear-gradient(354deg, #9004ed 20%, #ed04d0 80%);
+}
+
+.growing:hover {
+  transform: scale(1.1);
+}
+
+.border {
+  border: 1px solid red;
+}
+
+.flexcenter {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.iconheader {
+  margin: "0em auto 0.25em";
 }/*# sourceMappingURL=main.css.map */

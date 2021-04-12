@@ -1,17 +1,12 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import Checkbox from './Checkbox';
 import DeleteNoteItem from './DeleteNoteItem';
 
 const ListItem = ({noteItem, deleteItem}) => {
-  const [animationStyle, setAnimationStyle] = useState('');
-  
-  useEffect(() => {
-    setAnimationStyle('on');
-  }, []);
 
   console.log(noteItem, 'noteitem');
   return(
-    <tr className={`listTransition ${animationStyle}`}>
+    <tr>
         <Checkbox itemValue={noteItem.value}/>
       <td>
         {noteItem.text}

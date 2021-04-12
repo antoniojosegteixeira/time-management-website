@@ -18,8 +18,8 @@ const NoteTable = ({noteCollection, deleteItem}) => {
   }
 
   return (
-     <div className="ui container shrink-transition">
-        <table className="ui table">
+     <div className="ui container">
+        <table className="ui table wide">
           <tbody>   
             {mapNoteCollection()}     
           </tbody>
