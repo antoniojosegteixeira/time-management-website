@@ -1,22 +1,22 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 
-const Checkbox = ({noteItem}) => {
-  const [toggle, setToggle] = useState(false);
-  useEffect(() => {
-    setToggle(noteItem);
-  }, [noteItem])
+const Checkbox = ({noteItem, checkboxOutput}) => {
+  let bool = "off";
 
-  const toggleElement = () => {
-    if(toggle){
-      return <i className="toggle on icon large toggleButton on"></i>
-    } else {
-      return <i className="toggle off icon large toggleButton"></i>
-    }
+
+  noteItem.value ? bool = "on" : bool = "off";
+
+  const toggleCheckbox = () => {
+    const cloneNoteItem = { ...noteItem };
+    checkboxOutput(cloneNoteItem);
   }
 
+  const toggleElement = <i className={`toggle ${bool} icon large toggleButton ${bool}`}></i>
+  
+
   return (
-    <td className="collapsing" onClick={() => setToggle(!toggle)}>
-      {toggleElement()}
+    <td onClick={() => toggleCheckbox()}>
+      {toggleElement}
     </td>
   );
   

@@ -8,12 +8,10 @@ const Input = ({noteInput}) => {
   }
 
   return (
-    <div className="ui center aligned container" style={{marginBottom: .8 + 'rem'}}>
-      <div className="ui fluid action input">
+      <div className="ui fluid action input" style={{marginBottom: .8 + 'rem'}}>
         <input type="text" onChange={(e) => setInputText(e.target.value)}/>
-        <button className="ui button" onClick={handleAddButtonClick}>Adicionar</button>
+        <button className="ui button" onClick={handleAddButtonClick}>Add</button>
       </div>
-    </div>
   )
 
 }

@@ -11,9 +11,6 @@ body {
   }
 }
 
-.ui.container.medium {
-  width: 50%;
-}
 
 .gradient {
   height: 20em;
@@ -27,9 +24,6 @@ body {
   }
 }
 
-.border {
-  border: 1px solid red;
-}
 
 .flexcenter {
   width: fit-content;
@@ -43,3 +37,36 @@ body {
 .iconheader {
   margin: '0em auto 0.25em';
 }
+
+.clock.circle{
+  height: 300px;
+  width: 300px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ui.container.fixed-width {
+  min-width: 300px!important;
+  max-width: 50%!important;
+}
+
+.ui.icon.header.icon *{
+  color: rgb(230, 230, 230);
+  text-shadow: 2px 3px 4px #3a0018;
+}
+
+
+@media only screen and (max-width: 767px){
+  .ui.container.fixed-width {
+    width: auto!important;
+    min-width: 320px!important;
+    max-width: 100%!important;
+    margin-left: .5em!important;
+    margin-right: .5em!important;
+  }
+}
+  

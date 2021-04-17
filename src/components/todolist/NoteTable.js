@@ -1,13 +1,12 @@
 import React from 'react';
 import ListItem from './ListItem';
 
-const NoteTable = ({noteCollection, deleteItem}) => {
+const NoteTable = ({noteCollection, deleteItem, checkboxOutput}) => {
 
   const mapNoteCollection = () => {
     let listElements = noteCollection.map((noteItem) => {
-      console.log(noteItem)
       return (
-        <ListItem key={noteItem.text} noteItem={noteItem} deleteItem={deleteItem}/> 
+        <ListItem key={noteItem.text} noteItem={noteItem} deleteItem={deleteItem} checkboxOutput={checkboxOutput}/> 
       )
     });
     return listElements;
@@ -18,13 +17,11 @@ const NoteTable = ({noteCollection, deleteItem}) => {
   }
 
   return (
-     <div className="ui container">
-        <table className="ui table wide">
-          <tbody>   
-            {mapNoteCollection()}     
-          </tbody>
-        </table>
-      </div>
+      <table className="ui tablet stackable table">
+        <tbody>   
+          {mapNoteCollection()}     
+        </tbody>
+      </table>
   );
 }
 

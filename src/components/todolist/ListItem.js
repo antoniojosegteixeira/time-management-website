@@ -2,13 +2,12 @@ import React from 'react';
 import Checkbox from './Checkbox';
 import DeleteNoteItem from './DeleteNoteItem';
 
-const ListItem = ({noteItem, deleteItem}) => {
+const ListItem = ({noteItem, deleteItem, checkboxOutput}) => {
 
-  console.log(noteItem, 'noteitem');
   return(
     <tr>
-        <Checkbox itemValue={noteItem.value}/>
-      <td>
+        <Checkbox noteItem={noteItem} checkboxOutput={checkboxOutput}/>
+      <td className="fourteen wide column">
         {noteItem.text}
       </td>
         <DeleteNoteItem noteItem={noteItem} deleteItem={deleteItem}/>

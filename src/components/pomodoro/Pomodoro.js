@@ -1,58 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import Timer from './Timer';
 
-const Pomodoro = () => {
-  const timers = [
-    {
-      name: "Pomodoro",
-      time: 25
-    },
-    {
-      name: "Short Break",
-      time: 1
-    },
-    {
-      name: "Long Break",
-      time: 15
-    },
-  ];
-
-  //states
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [toggle, setToggle] = useState(false);
-  const [currentTime, setCurrentTime] = useState(timers[activeIndex].time * 60);
-
-  let timer;
-  const originalTime = timers[activeIndex].time * 60;
-
-
-
-  useEffect(() => {
-    console.log(toggle);
-    if(toggle){
-      console.log('ativado')
-      timer = setTimeout(() => {
-        setCurrentTime(currentTime - 1);
-      }, 1000);
-    }
-
-    if(!toggle){
-      setCurrentTime(timers[activeIndex].time * 60);
-    }
-
-    if(currentTime <= 0){
-      setToggle(false);
-      setCurrentTime(timers[activeIndex].time * 60);
-    }
-
-    return () => {clearTimeout(timer)}
-  }, [toggle, currentTime]);
-
-  useEffect(() => {
-    setToggle(false);
-    setCurrentTime(originalTime);
-  }, [originalTime]);
-
+const Pomodoro = ({timers, activeIndex, setActiveIndex, toggle, setToggle, currentTime}) => {
 
   const buttonText = () => {
     let text;
@@ -79,7 +28,7 @@ const Pomodoro = () => {
 
   return (
     <div className="ui container" style={{width: 300+'px'}}>
-      <div className="ui three item menu">
+      <div className="ui three item menu medium">
         {mapItems()}
       </div>
       <div className="ui container">

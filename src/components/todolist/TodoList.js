@@ -1,9 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Input from './Input';
 import NoteTable from './NoteTable';
 
-const TodoList = () => {
-  const [noteCollection, setNoteCollection] = useState([]);
+const TodoList = ({noteCollection, setNoteCollection }) => {
 
   const handleItemAdd = (note) => {
     if(!note){
@@ -25,7 +24,6 @@ const TodoList = () => {
   }
 
   const deleteItem = (item) => {
-    console.log("chegou o delete", item);
     for(let i in noteCollection){
       if(noteCollection[i].text === item.text){
         const noteColCopy = noteCollection;
@@ -37,10 +35,24 @@ const TodoList = () => {
     }
   }
 
+  const checkboxOutput = (outputItem) => {
+    for(let i in noteCollection){
+      if(noteCollection[i].text === outputItem.text){
+        const noteColClone = JSON.parse(JSON.stringify(noteCollection));
+        noteColClone[i].value = !outputItem.value;
+        setNoteCollection(noteColClone);
+        console.log(noteColClone, noteCollection);
+      }
+    }
+  }
+
+  
+
+
   return (
-    <div className="ui container medium">
-      <Input noteInput={handleItemAdd}></Input>   
-      <NoteTable noteCollection={noteCollection} deleteItem={deleteItem}/>
+    <div className="ui container fixed-width">
+        <Input noteInput={handleItemAdd}></Input>
+        <NoteTable noteCollection={noteCollection} deleteItem={deleteItem} checkboxOutput={checkboxOutput}/>
     </div>
   )
 
@@ -48,14 +60,3 @@ const TodoList = () => {
 
 
 export default TodoList;
-
-/* 
-         TodoList
-    Input        NoteTable
-                    ListItem
-               Checkbox DeleteNoteItem
-
-
-
-
-*/
