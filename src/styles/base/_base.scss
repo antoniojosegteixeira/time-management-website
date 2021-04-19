@@ -34,8 +34,10 @@ a {
   }
 }
 
+
 .content {
-  min-width: 80vw;
-  width: 100%;
+  @include flexcentered;
+  flex-direction: column;
+  width: 90vw;
   padding: 2em;
 }
