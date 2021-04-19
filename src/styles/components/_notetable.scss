@@ -12,6 +12,7 @@
   min-height: 3em;
   background-color: $background;
   border-radius: .3em;
+  margin-bottom: 3rem;
 }
 
 .listitem {
@@ -28,18 +29,16 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    //border: 1px solid rgba(0, 0, 255, 0.274);
   }
 
   .toggleIcon {
     font-size: 1.25em;
     width: 2em;
     height: 2em;
-    .icon {
-      color: rgb(175, 8, 8);
-      margin: 0;
-      height: 1.4em;
-
+    
+    i {
+      color: $middark-grey;
+      font-size: 1.3em;
     
       &.on {
         color: green;
@@ -50,11 +49,16 @@
   .innerColumn{
     width: 80%;
     display: flex;
+    margin: 1em;
   }
 
   .deleteElem {
     width: 2.5em;
     height: 2.5em;
+
+    i {
+      font-size: 1.4em;
+    }
   }
 }
 

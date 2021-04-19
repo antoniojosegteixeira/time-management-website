@@ -6,7 +6,7 @@ const DeleteNoteItem = ({noteItem, deleteItem}) => {
   return (
     <div>
       <button className="deleteElem" onClick={() => deleteItem(noteItem)}>
-        <i className="trash alternate icon"></i>
+      <i className="fas fa-trash-alt"></i>
       </button>
     </div>
   );

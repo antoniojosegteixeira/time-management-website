@@ -361,20 +361,31 @@ html {
  * Basic styles for links
  */
 a {
-  color: #e50050;
+  color: white;
   text-decoration: none;
 }
 a:hover, a:active, a:focus {
-  color: #222222;
-  text-decoration: underline;
+  color: white;
+  text-decoration: none;
+}
+
+.content {
+  min-width: 80vw;
+  width: 100%;
+  padding: 2em;
 }
 
 /**
  * Basic typography style for copy text
  */
-body {
+body, header {
   color: #222222;
-  font: normal 125%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font: normal 14px/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+@media (min-width: 25em) {
+  body, header {
+    font-size: 16px;
+  }
 }
 
 /**
@@ -437,8 +448,7 @@ body {
 }
 
 body {
-  background-color: purple;
-  font-size: 16px;
+  background-color: #161d33;
   display: flex;
   justify-content: center;
 }
@@ -538,6 +548,7 @@ button .icon {
   min-height: 3em;
   background-color: white;
   border-radius: 0.3em;
+  margin-bottom: 3rem;
 }
 
 .listitem {
@@ -560,36 +571,35 @@ button .icon {
   width: 2em;
   height: 2em;
 }
-.listitem .toggleIcon .icon {
-  color: #af0808;
-  margin: 0;
-  height: 1.4em;
+.listitem .toggleIcon i {
+  color: #b4b4b4;
+  font-size: 1.3em;
 }
-.listitem .toggleIcon .icon.on {
+.listitem .toggleIcon i.on {
   color: green;
 }
 .listitem .innerColumn {
   width: 80%;
   display: flex;
+  margin: 1em;
 }
 .listitem .deleteElem {
   width: 2.5em;
   height: 2.5em;
 }
+.listitem .deleteElem i {
+  font-size: 1.4em;
+}
 
 .timemenu {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  display: inline-block;
+  border: 1px solid green;
+  display: inline-flex;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: 3em;
+  min-height: 3em;
   border-radius: 0.3em;
-  padding: 0.6em 0 0.6em 0;
   cursor: pointer;
-  margin-top: 0.26em;
 }
 .timemenu :first-child {
   border-radius: 0.3em 0 0 0.3em;
@@ -600,8 +610,14 @@ button .icon {
   border-left: 0;
 }
 .timemenu a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  text-align: center;
   text-decoration: none;
-  padding: 0.86em;
+  min-height: 3em;
+  padding: 0.4em;
   background-color: white;
   color: #222222;
   border: 1px solid #b4b4b4;
@@ -627,36 +643,43 @@ button .icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 300px;
-  height: 300px;
+  width: 18em;
+  height: 18em;
   border-radius: 50%;
-  background-color: #DB7F67;
+  background-color: #FF8427;
 }
 
 .navcontainer {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid green;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  margin-bottom: 1em;
 }
 .navcontainer a {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1em;
+  flex-direction: column;
+  padding: 1em 1em 0em 1em;
+  transition: all 0.2s ease-in-out;
+}
+.navcontainer a i {
+  font-size: 4em;
 }
 .navcontainer a h3 {
   -webkit-margin-before: 0.5em;
           margin-block-start: 0.5em;
 }
+.navcontainer a:hover {
+  color: white;
+  text-decoration: none;
+  transform: scale(1.1);
+}
 
-.svgNav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.navIcon {
   width: 4em;
   height: 4em;
 }/*# sourceMappingURL=main2.css.map */

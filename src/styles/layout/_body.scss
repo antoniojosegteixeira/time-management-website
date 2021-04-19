@@ -1,6 +1,5 @@
 body {
-  background-color: purple;
-  font-size: 16px;
+  background-color: $brand-color;
   display: flex;
   justify-content: center;
 }
@@ -41,3 +40,4 @@ button {
     flex-direction: column;
   }
 }
+

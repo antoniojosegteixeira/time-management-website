@@ -1,14 +1,12 @@
 
 
 .timemenu {
-  @include flexcentered;
-  display: inline-block;
+  border: 1px solid green;
+  display: inline-flex;
   width: fit-content;
-  height: 3em;
+  min-height: 3em;
   border-radius: .3em;
-  padding: .6em 0 .6em 0;
   cursor: pointer;
-  margin-top: .26em;
 
 
   :first-child {
@@ -23,8 +21,12 @@
   }
 
   a {
+    @include flexcentered;
+    flex-direction: row;
+    text-align: center;
     text-decoration: none;
-    padding: .86em;
+    min-height: 3em;
+    padding: .4em;
     background-color: $background;
     color: $text-color;
     border: 1px solid $middark-grey;
@@ -56,8 +58,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 300px;
-  height: 300px;
+  width: 18em;
+  height: 18em;
   border-radius: 50%;
-  background-color: #DB7F67;
+  background-color: $circle-color;
 }

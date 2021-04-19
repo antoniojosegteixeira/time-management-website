@@ -22,11 +22,15 @@ $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
 /// @type Color
 $text-color: rgb(34, 34, 34) !default;
 
-/// Main brand color
+/// Main brand color - main background
 /// @type Color
-$brand-color: rgb(229, 0, 80) !default;
+$brand-color: #161d33 !default; //#1E212B
 
-/// Background color
+/// Pomodoro circle color
+/// @type Color
+$circle-color: #FF8427 !default;
+
+/// Menu background color
 /// @type Color
 $background: rgb(255, 255, 255) !default;
 

@@ -25,11 +25,17 @@ html {
  * Basic styles for links
  */
 a {
-  color: $brand-color;
+  color: $background;
   text-decoration: none;
 
   @include on-event {
-    color: $text-color;
-    text-decoration: underline;
+    color: $background;
+    text-decoration: none;
   }
+}
+
+.content {
+  min-width: 80vw;
+  width: 100%;
+  padding: 2em;
 }

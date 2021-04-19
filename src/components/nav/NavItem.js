@@ -28,17 +28,14 @@ const NavItem = ({data}) => {
 
   return (
       <a 
-        className={`growing ${headerClass}`} 
+        className={headerClass}
         href={data.url}
         onClick={onClick}
       >
-        <div className="flexcentered down">
           <i className={data.className}></i>
-          <i className="fa fass-tasks"></i>
           <h3>
             {data.name}
           </h3>
-        </div>
       </a>
   )
 }

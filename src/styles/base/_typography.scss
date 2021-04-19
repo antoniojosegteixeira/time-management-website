@@ -1,11 +1,11 @@
 /**
  * Basic typography style for copy text
  */
-body {
+body, header {
   color: $text-color;
-  font: normal 125% / 1.4 $text-font-stack;
-}
+  font: normal 14px / 1.4 $text-font-stack;
 
-body i {
-  font-family:'FontAwesome'!important;
+  @include breakpoint(400){
+    font-size: 16px;
+  }
 }

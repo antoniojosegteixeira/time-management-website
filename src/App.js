@@ -68,7 +68,7 @@ const App = () => {
   }, [noteCollection])
 
   return (
-    <div>
+    <div className="content">
       <Nav/>
       <Route url="/todolist">
         <TodoList
