@@ -1,0 +1,43 @@
+body {
+  background-color: purple;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  min-height: 2.2em;
+  border: 0;
+  padding: 0 1em 0 1em;
+  input, input:focus, input:hover{
+    box-shadow: none;
+    outline: 0;
+  }
+}
+
+button {
+  .icon {
+    height: auto;
+    min-height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2em;
+  }
+}
+
+.sdcontainer {
+  max-width: 100%;
+  height: fit-content;
+}
+
+.flexcentered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.down {
+    flex-direction: column;
+  }
+}

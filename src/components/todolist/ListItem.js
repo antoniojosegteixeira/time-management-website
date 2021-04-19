@@ -5,13 +5,13 @@ import DeleteNoteItem from './DeleteNoteItem';
 const ListItem = ({noteItem, deleteItem, checkboxOutput}) => {
 
   return(
-    <tr>
+    <div className="listitem">
         <Checkbox noteItem={noteItem} checkboxOutput={checkboxOutput}/>
-      <td className="fourteen wide column">
+      <div className="innerColumn">
         {noteItem.text}
-      </td>
+      </div>
         <DeleteNoteItem noteItem={noteItem} deleteItem={deleteItem}/>
-    </tr>
+    </div>
   );
 
 }

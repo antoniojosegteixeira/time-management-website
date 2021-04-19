@@ -1,0 +1,61 @@
+
+.todolist {
+  min-width: 300px;
+  width: 92vw;
+  max-width: 600px;
+}
+
+.notetable {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 3em;
+  background-color: $background;
+  border-radius: .3em;
+}
+
+.listitem {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  border-bottom: 1px solid $light-grey;
+  border-top: none;
+  border-radius: .3em;
+
+  div {
+    margin: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    //border: 1px solid rgba(0, 0, 255, 0.274);
+  }
+
+  .toggleIcon {
+    font-size: 1.25em;
+    width: 2em;
+    height: 2em;
+    .icon {
+      color: rgb(175, 8, 8);
+      margin: 0;
+      height: 1.4em;
+
+    
+      &.on {
+        color: green;
+      }
+    }
+  }
+
+  .innerColumn{
+    width: 80%;
+    display: flex;
+  }
+
+  .deleteElem {
+    width: 2.5em;
+    height: 2.5em;
+  }
+}
+
+

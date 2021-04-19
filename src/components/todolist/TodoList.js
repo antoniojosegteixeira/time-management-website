@@ -50,7 +50,7 @@ const TodoList = ({noteCollection, setNoteCollection }) => {
 
 
   return (
-    <div className="ui container fixed-width">
+    <div className="sdcontainer todolist">
         <Input noteInput={handleItemAdd}></Input>
         <NoteTable noteCollection={noteCollection} deleteItem={deleteItem} checkboxOutput={checkboxOutput}/>
     </div>

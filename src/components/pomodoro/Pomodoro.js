@@ -18,7 +18,7 @@ const Pomodoro = ({timers, activeIndex, setActiveIndex, toggle, setToggle, curre
       }
       return <a 
         key={i}
-        className={`item ${itemClass}`} 
+        className={`${itemClass}`} 
         onClick={() => setActiveIndex(i)}>
           {e.name}
         </a>
@@ -27,26 +27,20 @@ const Pomodoro = ({timers, activeIndex, setActiveIndex, toggle, setToggle, curre
   }
 
   return (
-    <div className="ui container" style={{width: 300+'px'}}>
-      <div className="ui three item menu medium">
+    <div className="flexcentered down">
+      <div className="timemenu">
         {mapItems()}
       </div>
-      <div className="ui container">
-        <div className="ui centered grid">
-          <div className="row">
-            <div className="clock circle">
-              <Timer 
-                currentTime={currentTime}
-                toggle={toggle}
-              />
-            </div>
-          </div>
+      <div className="circlecontainer">
+        <div className="clock circle">
+          <Timer 
+            currentTime={currentTime}
+            toggle={toggle}
+          />
         </div>
-      </div>
-      <div className="ui centered grid" style={{marginTop: '20px'}}>
-        <div className="ui button" onClick={() => setToggle(!toggle)}>
+        <button onClick={() => setToggle(!toggle)}>
           {buttonText()}
-        </div>
+        </button>
       </div>
     </div>
   );

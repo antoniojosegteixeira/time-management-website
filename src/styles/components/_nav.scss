@@ -1,0 +1,23 @@
+
+.navcontainer {
+  @include flexcentered;
+
+  border: 1px solid green;
+  height: fit-content;
+
+  a {
+    @include flexcentered;
+    padding: 1em;
+
+    h3 {
+      margin-block-start: .5em;
+    }
+  }
+
+}
+
+.svgNav {
+  @include flexcentered;
+  width: 4em;
+  height: 4em;
+}

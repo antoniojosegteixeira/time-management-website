@@ -17,11 +17,11 @@ const NoteTable = ({noteCollection, deleteItem, checkboxOutput}) => {
   }
 
   return (
-      <table className="ui tablet stackable table">
-        <tbody>   
+      <div className="notetable">
+        <div>   
           {mapNoteCollection()}     
-        </tbody>
-      </table>
+        </div>
+      </div>
   );
 }
 

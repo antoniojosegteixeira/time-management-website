@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React, {useEffect, useState} from 'react';
 
 const NavItem = ({data}) => {
 
@@ -12,21 +11,35 @@ const NavItem = ({data}) => {
     window.dispatchEvent(navEvent);
   }
 
+  const [currentPath, setCurrentPath] = useState(window.location.pathname);
+
+  useEffect(() => {
+    const onLocationChange = () => {
+      setCurrentPath(window.location.pathname);
+    }
+
+    window.addEventListener('popstate', onLocationChange);
+    return () => {
+      window.removeEventListener('popstate', onLocationChange)
+    }
+   });
+   let headerClass = "stand"
+   window.location.pathname === "/" ? headerClass = "largeHeader" : headerClass = "smallHeader";
+
   return (
       <a 
-        className="item growing" 
-        style={{margin: '4rem 0 2.1rem 0', cursor: 'pointer'}}
+        className={`growing ${headerClass}`} 
         href={data.url}
         onClick={onClick}
       >
-        <h2 className="ui icon header medium">
+        <div className="flexcentered down">
           <i className={data.className}></i>
-          <div className="content">
+          <i className="fa fass-tasks"></i>
+          <h3>
             {data.name}
-          </div>
-        </h2>
+          </h3>
+        </div>
       </a>
-
   )
 }
 

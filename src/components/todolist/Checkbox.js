@@ -11,13 +11,13 @@ const Checkbox = ({noteItem, checkboxOutput}) => {
     checkboxOutput(cloneNoteItem);
   }
 
-  const toggleElement = <i className={`toggle ${bool} icon large toggleButton ${bool}`}></i>
+  const toggleElement = <i className={`toggle ${bool} icon ${bool}`}></i>
   
 
   return (
-    <td onClick={() => toggleCheckbox()}>
+    <div className="toggleIcon" onClick={() => toggleCheckbox()}>
       {toggleElement}
-    </td>
+    </div>
   );
   
 }

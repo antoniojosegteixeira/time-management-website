@@ -1,0 +1,35 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid $light-grey;
+  outline: 0;
+  cursor: pointer;
+  line-height: 2em;
+  font-style: normal;
+  background-color: $light-grey;
+
+  border-radius: .3em;
+  padding: 0em 1em 0em 1em;
+  &:hover {
+    background-color: $mid-grey;
+  }
+  &:active {
+    background-color: $middark-grey;
+  }
+
+  .icon {
+    min-height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+  }
+}

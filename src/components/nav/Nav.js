@@ -4,12 +4,12 @@ import NavItem from './NavItem';
 const Nav = () => {
   const props = [
     {
-      className: "tasks icon", 
+      className: "fas fa-stopwatch",
       name: "To-do List",
       url: "/todolist"
     },
     { 
-      className: "stopwatch icon",
+      className: "fas fa-tasks",
       name: "Pomodoro",
       url: "/pomodoro"
     }
@@ -22,7 +22,7 @@ const Nav = () => {
   })
 
   return (
-      <header className="ui centered grid">
+      <header className="navcontainer">
           {mapProps}
       </header>
   )

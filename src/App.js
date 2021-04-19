@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import "./styles/main.css";
+import "./styles/main2.css";
 import Route from './route/Route';
 import TodoList from './components/todolist/TodoList';
 import Nav from './components/nav/Nav';
