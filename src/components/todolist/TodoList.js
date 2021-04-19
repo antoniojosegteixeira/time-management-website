@@ -41,7 +41,6 @@ const TodoList = ({noteCollection, setNoteCollection }) => {
         const noteColClone = JSON.parse(JSON.stringify(noteCollection));
         noteColClone[i].value = !outputItem.value;
         setNoteCollection(noteColClone);
-        console.log(noteColClone, noteCollection);
       }
     }
   }

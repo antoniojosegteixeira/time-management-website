@@ -8,7 +8,6 @@ const Timer = ({currentTime}) => {
     const seconds = (currentTime - minutes*60);
     const paddedMinutes = minutes.toString().padStart(2, "0");
     const paddedSeconds = seconds.toString().padStart(2, "0");
-    console.log('minutes', minutes, 'seconds', paddedSeconds);
     return `${paddedMinutes}:${paddedSeconds}`;
   }
 

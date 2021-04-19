@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import "./styles/main2.css";
+import "./styles/main.css";
 import Route from './route/Route';
 import TodoList from './components/todolist/TodoList';
 import Nav from './components/nav/Nav';
@@ -33,9 +33,7 @@ const App = () => {
 
 
   useEffect(() => {
-    console.log(toggle);
     if(toggle){
-      console.log('ativado')
       timer = setTimeout(() => {
         setCurrentTime(currentTime - 1);
       }, 1000);
@@ -62,10 +60,6 @@ const App = () => {
 
   //TODO LIST CODE
   const [noteCollection, setNoteCollection] = useState([]);
-
-  useEffect(() => {
-    console.log('collection', noteCollection);
-  }, [noteCollection])
 
   return (
     <div className="content">

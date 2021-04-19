@@ -527,6 +527,7 @@ button .icon {
 }
 .inputContainer input {
   width: 100%;
+  height: 1.2em;
   box-shadow: none;
   outline: 0;
 }
@@ -588,7 +589,6 @@ button .icon {
 }
 
 .timemenu {
-  border: 1px solid green;
   display: inline-flex;
   width: -webkit-fit-content;
   width: -moz-fit-content;
