@@ -15,7 +15,7 @@ const App = () => {
     },
     {
       name: "Short Break",
-      time: 0.1
+      time: 5
     },
     {
       name: "Long Break",
