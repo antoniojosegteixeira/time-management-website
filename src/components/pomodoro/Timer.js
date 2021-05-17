@@ -3,6 +3,7 @@ import React from 'react';
 
 const Timer = ({currentTime}) => {
 
+  
   const convertTime = () => {
     const minutes = Math.floor(currentTime/60);
     const seconds = (currentTime - minutes*60);

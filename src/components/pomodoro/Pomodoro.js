@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import Timer from './Timer';
 
 const Pomodoro = ({timers, activeIndex, setActiveIndex, toggle, setToggle, currentTime}) => {
@@ -16,12 +16,12 @@ const Pomodoro = ({timers, activeIndex, setActiveIndex, toggle, setToggle, curre
       if(activeIndex === i) {
         itemClass = "active";
       }
-      return <a 
+      return <button
         key={i}
         className={`${itemClass}`} 
         onClick={() => setActiveIndex(i)}>
           {e.name}
-        </a>
+        </button>
     });
     return itemsRendered;
   }

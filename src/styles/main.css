@@ -594,8 +594,14 @@ button .icon {
   width: -moz-fit-content;
   width: fit-content;
   min-height: 3em;
-  border-radius: 0.3em;
   cursor: pointer;
+  border-radius: 0em;
+}
+.timemenu button {
+  white-space: nowrap;
+  font-size: 0.9em;
+  border-radius: 0em;
+  padding: 0em 1em 0em 1em;
 }
 .timemenu :first-child {
   border-radius: 0.3em 0 0 0.3em;
@@ -645,6 +651,11 @@ button .icon {
   background-color: #FF8427;
 }
 
+@media (min-width: 31.25em) {
+  .timemenu button {
+    font-size: 1em;
+  }
+}
 .navcontainer {
   display: flex;
   align-items: center;
@@ -678,4 +689,4 @@ button .icon {
 .navIcon {
   width: 4em;
   height: 4em;
-}/*# sourceMappingURL=main2.css.map */
+}/*# sourceMappingURL=main.css.map */

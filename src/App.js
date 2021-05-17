@@ -15,7 +15,7 @@ const App = () => {
     },
     {
       name: "Short Break",
-      time: 5
+      time: 0.1
     },
     {
       name: "Long Break",
@@ -27,35 +27,42 @@ const App = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [toggle, setToggle] = useState(false);
   const [currentTime, setCurrentTime] = useState(timers[activeIndex].time * 60);
-
-  let timer;
   const originalTime = timers[activeIndex].time * 60;
 
 
   useEffect(() => {
     if(toggle){
-      timer = setTimeout(() => {
+      let oneSecTimer = setTimeout(() => {
         setCurrentTime(currentTime - 1);
       }, 1000);
+      return () => clearTimeout(oneSecTimer);
     }
 
     if(!toggle){
-      setCurrentTime(timers[activeIndex].time * 60);
+      setCurrentTime(originalTime);
     }
+  }, [toggle, currentTime, originalTime]);
 
-    if(currentTime <= 0){
-      setToggle(false);
-      setCurrentTime(timers[activeIndex].time * 60);
-      alert("Hey! Your time is up!");
-    }
-
-    return () => {clearTimeout(timer)}
-  }, [toggle, currentTime]);
 
   useEffect(() => {
-    setToggle(false);
     setCurrentTime(originalTime);
-  }, [originalTime]);
+    setToggle(false);
+  }, [activeIndex, originalTime]);
+
+
+  // TIME OFF
+  const isTimeOver = () => {
+    if(currentTime <= 0){
+      setToggle(false);
+      setCurrentTime(originalTime);
+      alert("Hey! Your time is up!");
+    }
+  }
+  isTimeOver();
+
+
+
+
 
 
   //TODO LIST CODE

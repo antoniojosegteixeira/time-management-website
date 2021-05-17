@@ -4,7 +4,6 @@ const NavItem = ({data}) => {
 
   const onClick = (e) => {
     e.preventDefault();
-    console.log('CLICADO EM', data.url)
     window.history.pushState({}, '', data.url);
 
     const navEvent = new PopStateEvent('popstate');
@@ -24,7 +23,7 @@ const NavItem = ({data}) => {
     }
    });
    let headerClass = "stand"
-   window.location.pathname === "/" ? headerClass = "largeHeader" : headerClass = "smallHeader";
+   currentPath === "/" ? headerClass = "largeHeader" : headerClass = "smallHeader";
 
   return (
       <a 

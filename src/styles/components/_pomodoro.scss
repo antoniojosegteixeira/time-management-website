@@ -4,16 +4,21 @@
   display: inline-flex;
   width: fit-content;
   min-height: 3em;
-  border-radius: .3em;
   cursor: pointer;
+  border-radius: 0em;
 
+  button {
+    white-space: nowrap;
+    font-size: .9em ;
+    border-radius: 0em;
+    padding: 0em 1em 0em 1em;
+  }
 
   :first-child {
     border-radius: .3em 0 0 .3em;
     border-right: 0;
   }
 
-  
   :last-child {
     border-radius: 0 .3em .3em 0;
     border-left: 0;
@@ -61,4 +66,13 @@
   height: 18em;
   border-radius: 50%;
   background-color: $circle-color;
+}
+
+
+@include breakpoint(500) {
+  .timemenu {
+    button {
+      font-size: 1em;
+    }
+  }
 }
