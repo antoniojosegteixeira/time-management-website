@@ -591,6 +591,7 @@ button .icon {
   display: block;
 }
 .listitem .delete-elem-wrapper .delete-elem {
+  margin-right: 0.4em;
   float: right;
   width: 2.5em;
   height: 2.5em;
