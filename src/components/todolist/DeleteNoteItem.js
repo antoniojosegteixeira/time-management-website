@@ -4,8 +4,8 @@ const DeleteNoteItem = ({noteItem, deleteItem}) => {
   
 
   return (
-    <div>
-      <button className="deleteElem" onClick={() => deleteItem(noteItem)}>
+    <div className="delete-elem-wrapper">
+      <button className="delete-elem" onClick={() => deleteItem(noteItem)}>
       <i className="fas fa-trash-alt"></i>
       </button>
     </div>

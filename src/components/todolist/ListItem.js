@@ -8,7 +8,7 @@ const ListItem = ({noteItem, deleteItem, checkboxOutput}) => {
     <div className="listitem">
         <Checkbox noteItem={noteItem} checkboxOutput={checkboxOutput}/>
       <div className="innerColumn">
-        {noteItem.text}
+        <p>{noteItem.text}</p>
       </div>
         <DeleteNoteItem noteItem={noteItem} deleteItem={deleteItem}/>
     </div>

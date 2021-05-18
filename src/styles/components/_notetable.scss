@@ -16,12 +16,15 @@
 }
 
 .listitem {
-  display: flex;
-  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
   align-items: center;
   border-bottom: 1px solid $light-grey;
   border-top: none;
   border-radius: .3em;
+  overflow:hidden;
+  height: auto;
 
   div {
     margin: 0.5em;
@@ -47,19 +50,28 @@
   }
 
   .innerColumn{
-    width: 80%;
+    position: relative;
+    min-width: 75%;
     display: flex;
-    margin: 1em;
-  }
-
-  .deleteElem {
-    width: 2.5em;
-    height: 2.5em;
-
-    i {
-      font-size: 1.4em;
+    overflow: hidden;
+    p {
+      width: 100%;
     }
   }
+
+  .delete-elem-wrapper {
+    display: block;
+    .delete-elem {
+      float: right;
+      width: 2.5em;
+      height: 2.5em;
+  
+      i {
+        font-size: 1.4em;
+      }
+    }
+  }
+  
 }
 
 

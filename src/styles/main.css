@@ -549,12 +549,15 @@ button .icon {
 }
 
 .listitem {
-  display: flex;
-  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
   align-items: center;
   border-bottom: 1px solid #e1e1e1;
   border-top: none;
   border-radius: 0.3em;
+  overflow: hidden;
+  height: auto;
 }
 .listitem div {
   margin: 0.5em;
@@ -576,15 +579,23 @@ button .icon {
   color: green;
 }
 .listitem .innerColumn {
-  width: 80%;
+  position: relative;
+  min-width: 75%;
   display: flex;
-  margin: 1em;
+  overflow: hidden;
 }
-.listitem .deleteElem {
+.listitem .innerColumn p {
+  width: 100%;
+}
+.listitem .delete-elem-wrapper {
+  display: block;
+}
+.listitem .delete-elem-wrapper .delete-elem {
+  float: right;
   width: 2.5em;
   height: 2.5em;
 }
-.listitem .deleteElem i {
+.listitem .delete-elem-wrapper .delete-elem i {
   font-size: 1.4em;
 }
 
